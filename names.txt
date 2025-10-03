@@ -1,0 +1,3 @@
+https://raw.githubusercontent.com/ternera/hacker101-ctf/main/names.txt
+
+https://github.com/drtychai/wordlists/blob/master/fasttrack.txt

@@ -1,0 +1,41 @@
+STEP 1:
+{
+  allUsers {
+   edges {
+        node {
+            id
+            username
+         }
+       }
+    }
+}
+
+STEP 2:
+mutation{
+  modifyBug(private:false, id:2){
+    ok
+    bug {
+      id
+      text
+      reporterId
+      private
+    }
+  }
+}
+
+STEP 3:
+{
+  allBugs {
+    id
+    text
+    private
+    reporter {
+        id
+    }
+  }
+}
+
+
+https://itsfading.github.io/
+https://apis.guru/graphql-voyager/
+https://www.tutorialspoint.com/graphql/index.htm

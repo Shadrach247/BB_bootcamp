@@ -1,0 +1,48 @@
+STEP 1:
+query {
+   user {
+     edges {
+        node {
+	        id
+            username
+         }
+      }
+   }
+}
+
+STEP 2:
+query {
+    allBugs {
+    edges {
+       node {
+       id
+       id
+       private
+       reporter {
+         id
+       }
+       reporterId
+      
+        }
+     }
+  }
+}
+
+STEP 3:
+query {
+  user {
+    edges {
+      node {
+        id
+        username
+        bugs{
+          edges {
+            node {
+              text
+            }
+          }
+        }
+      }
+    }
+  }
+}

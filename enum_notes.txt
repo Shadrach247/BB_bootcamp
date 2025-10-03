@@ -1,0 +1,11 @@
+NoSQL Vulnerability:
+$
+{
+}
+\
+"
+`
+;
+%00
+
+
