@@ -1,2 +1,5 @@
-pentestmonkey.net/category/cheat-sheet/sql-injection 
+pentestmonkey.net/category/cheat-sheet/sql-injection
+
+## A UNION payload with a single column:
+' UNION SELECT null --
 

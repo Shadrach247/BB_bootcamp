@@ -1,0 +1,30 @@
+Issue Reporting Template:
+
+A high-quality report must follow this format to ensure effective triage and resolution:
+
+Title:
+
+Use the format:
+
+[ASSET] - VULNERABILITY on FIELD/FUNCTION
+
+Example:
+[api.topperpay.com] - SQL Injection leading to user details exfiltration on getUserDetails
+
+Impact Analysis:
+
+1. Clearly explain why this is a security risk.
+2. Describe the business and compliance impact (e.g., data exposure, financial manipulation, account takeover).
+3. Include real-world scenarios where this could be exploited at scale.
+
+Reproduction Steps:
+
+Provide step-by-step instructions on how to reproduce the issue:
+1. Describe the environment (e.g., endpoint, affected function, required permissions).
+2. Provide exact requests or payloads that demonstrate the vulnerability.
+3. Include screenshots, logs, or proof-of-concept (PoC) code to verify impact.
+
+Suggested Fixes (if applicable):
+
+1. Provide specific technical recommendations on how to mitigate the vulnerability, avoid generic and AI-generated solutions.
+2. Reference resources or how-tos relevant to the issue.

