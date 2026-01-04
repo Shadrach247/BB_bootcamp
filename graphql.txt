@@ -1,6 +1,0 @@
-Graphw00f
-Clairvoyance
-BatchQL
-GraphQL Cop
-Misconfig Mapper
-InQL Burpsuite Extension
