@@ -1,6 +1,0 @@
-sudo apt install gobuster
-
-sudo apt-get install seclists
-
-
-gobuster -h
